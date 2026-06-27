@@ -257,7 +257,7 @@
     <div id="intro-splash-screen">
         <div class="splash-content-wrapper">
             <h1>National Results Portal</h1>
-            <p>Cloud Analytics System</p>
+            <p>View Your Results</p>
         </div>
     </div>
 
@@ -271,7 +271,7 @@
             <h2>Academic Examination Center</h2>
             <form id="student-lookup-form">
                 <div class="form-group">
-                    <label>Target Infrastructure Institution</label>
+                    <label>school Name</label>
                     <input type="text" id="search-school-id" placeholder="Type school name to search..." autocomplete="off" required>
                     <input type="hidden" id="selected-school-key" value="">
                     <div id="autocomplete-suggestions-box" class="autocomplete-suggestions hidden"></div>
@@ -288,7 +288,7 @@
                     </div>
                     <div><label>Date of Birth</label><input type="date" id="search-dob" required></div>
                 </div>
-                <button type="submit" class="main-btn">Decrypt & Query Records</button>
+                <button type="submit" class="main-btn">View Results</button>
             </form>
         </section>
 
@@ -314,11 +314,11 @@
                     <span id="res-total-marks"></span><span id="res-class-position"></span>
                     <span id="res-total-points"></span><span id="res-pass-status"></span>
                 </div>
-                <div class="results-row th"><span>Subject Course</span><span>Mark</span><span>Grade</span><span>Rank</span><span>Remarks</span></div>
+                <div class="results-row th"><span>Subject name</span><span>Marks</span><span>Grade</span><span>Position</span><span>Remarks</span></div>
                 <div id="grades-list"></div>
                 
                 <div class="chart-container">
-                    <h4>Subject Mark Analysis Matrix</h4>
+                    <h4>The Graph of Scores Against Subject</h4>
                     <div class="chart-upward-wrapper" id="student-chart-bars-render"></div>
                 </div>
 
@@ -338,12 +338,12 @@
 
         <section id="teacher-section" class="hidden">
             <div id="school-login-box" class="results-card">
-                <h3>Registered Institutional Access Gate</h3>
+                <h3>Registered School Access Gate</h3>
                 <form id="form-school-login">
                     <div class="form-group"><label>Corporate School Email Address</label><input type="email" id="login-email" required></div>
                     <div class="form-group"><label>Security Access Account Password</label><input type="password" id="login-password" required></div>
-                    <button type="submit" class="main-btn" style="margin-bottom: 15px;">Authenticate Session</button>
-                    <p style="font-size: 14px; text-align: center;">New institution profile? <span class="auth-switch-link" id="go-to-register">Create Cloud Account</span></p>
+                    <button type="submit" class="main-btn" style="margin-bottom: 15px;">Sign In</button>
+                    <p style="font-size: 14px; text-align: center;">New School profile? <span class="auth-switch-link" id="go-to-register">Create Cloud Account</span></p>
                 </form>
             </div>
 
@@ -436,7 +436,7 @@
                         
                         <div class="live-counter-strip">
                             <div class="counter-box">Total Score Entry Sum<span id="live-total-marks">0</span></div>
-                            <div class="counter-box">Calculated Metric Points<span id="live-total-points">--</span></div>
+                            <div class="counter-box">Toatal Points<span id="live-total-points">--</span></div>
                         </div>
 
                         <div class="form-group"><label>Full Legal Name</label><input type="text" id="input-name" required></div>
@@ -467,7 +467,7 @@
                         </div>
                         <div class="maneb-scroller" id="dynamic-scroller-container"></div>
                         <div class="form-row-two">
-                            <button type="submit" class="main-btn">Commit Profile Entry</button>
+                            <button type="submit" class="main-btn">commit Data Entry</button>
                             <button type="button" class="main-btn" id="cancel-upload-btn" style="background-color: var(--text-muted);">Cancel & View Dashboards</button>
                         </div>
                     </form>
@@ -1119,7 +1119,7 @@
 
             let tableCurrentY = 96; doc.setFillColor(15, 23, 42); doc.rect(10, tableCurrentY, 190, 8, 'F');
             doc.setTextColor(255, 255, 255); doc.setFont("Helvetica", "bold"); doc.setFontSize(9);
-            doc.text("SUBJECT COURSE", 15, tableCurrentY + 5); doc.text("SCORE", 75, tableCurrentY + 5); doc.text("GRADE", 100, tableCurrentY + 5); doc.text("RANK (IN CLASS)", 125, tableCurrentY + 5); doc.text("REMARKS", 165, tableCurrentY + 5);
+            doc.text("SUBJECT Name", 15, tableCurrentY + 5); doc.text("SCORE", 75, tableCurrentY + 5); doc.text("GRADE", 100, tableCurrentY + 5); doc.text("RANK (IN CLASS)", 125, tableCurrentY + 5); doc.text("REMARKS", 165, tableCurrentY + 5);
 
             tableCurrentY += 8; doc.setTextColor(15, 23, 42); doc.setFont("Helvetica", "normal");
 
